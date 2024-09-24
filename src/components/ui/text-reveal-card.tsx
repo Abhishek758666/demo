@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState, memo } from "react";
+import React, { useEffect, useRef, useState, memo, MouseEvent } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { cn } from "@/lib/utils";
@@ -17,7 +17,7 @@ export const TextRevealCard = ({
   className?: string;
 }) => {
   const [widthPercentage, setWidthPercentage] = useState(0);
-  const cardRef = useRef<HTMLDivElement | any>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
   const [left, setLeft] = useState(0);
   const [localWidth, setLocalWidth] = useState(0);
   const [isMouseOver, setIsMouseOver] = useState(false);
@@ -31,7 +31,7 @@ export const TextRevealCard = ({
     }
   }, []);
 
-  function mouseMoveHandler(event: any) {
+  function mouseMoveHandler(event: MouseEvent<HTMLElement>) {
     event.preventDefault();
 
     const { clientX } = event;

@@ -7,7 +7,6 @@ import Other from "./components/OtherSection";
 import Loader from "./components/Loader";
 
 export default function Home() {
-  alert("This site is still under construction");
   const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,

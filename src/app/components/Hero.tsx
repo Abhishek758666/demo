@@ -67,7 +67,7 @@ const Hero = ({ scrollYProgress }: SectionProps) => {
           className="text-base md:text-lg lg:text-xl font-semibold max-w-full md:max-w-[40%] mb-4 md:mb-0 md:mr-8"
           variants={childVariants}
         >
-          I'm a Frontend developer specializing in Next.js and React.js,
+          I&apos;m a Frontend developer specializing in Next.js and React.js,
           creating responsive, high-performance websites with clean code.
         </motion.p>
         <motion.div className="w-full md:w-[60%]" variants={childVariants}>

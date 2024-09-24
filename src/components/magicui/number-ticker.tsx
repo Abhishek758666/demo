@@ -34,7 +34,7 @@ export default function NumberTicker({
       motionValue.set(targetValue);
       console.log(motionValue);
     }
-  }, [isInView, direction, value, motionValue, onComplete]);
+  }, [isInView, direction, value, motionValue]);
 
   useEffect(() => {
     const timer = setTimeout(updateNumber, delay * 1000);

@@ -1,11 +1,8 @@
 import { motion, MotionValue, useTransform } from "framer-motion";
-import Image from "next/image";
 import React from "react";
 import Skills from "./Skills";
 import HoverImageLinks from "./ImageHoverLinks";
 import Footer from "./Footer";
-import VelocityScroll from "./Marquee";
-import TextRevealByWord from "./TextReveal";
 
 interface SectionProps {
   scrollYProgress: MotionValue<number>;

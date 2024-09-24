@@ -33,7 +33,6 @@ export const wrap = (min: number, max: number, v: number) => {
 export default function VelocityScroll({
   text,
   default_velocity = 5,
-  className,
 }: VelocityScrollProps) {
   function ParallaxText({
     children,
