@@ -1,11 +1,11 @@
-import React, { ReactNode, useEffect, useRef } from "react";
+import React, { useEffect, useRef, ReactElement } from "react";
 import gsap from "gsap";
 
 interface childrenProps {
-  children: ReactNode;
+  children: ReactElement;
 }
 
-export default function index({ children }: childrenProps) {
+export default function Magnetic({ children }: childrenProps) {
   const magnetic = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
