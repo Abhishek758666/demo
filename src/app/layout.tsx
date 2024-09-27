@@ -27,10 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link
-          href="https://fonts.cdnfonts.com/css/mona-sans"
-          rel="stylesheet"
-        />
+        <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

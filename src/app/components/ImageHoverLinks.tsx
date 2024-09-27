@@ -9,11 +9,11 @@ import unavailable from "@/public/not-available.webp";
 export const HoverImageLinks = () => {
   return (
     <section className="p-4 md:px-8">
-      <h1 className="w-full text-[3rem] md:text-[6rem] max-w-6xl mx-auto font-black py-1 pt-10 md:pt-20">
-        PROJECTS
+      <h1 className="w-full text-[3rem] tracking-[-0.07em] md:text-[6rem] max-w-7xl mx-auto font-semibold py-1 pt-10 md:pt-[15rem]">
+        RECENT PROJECTS
       </h1>
 
-      <div className="w-full max-w-6xl mx-auto">
+      <div className="w-full max-w-7xl mx-auto">
         <Link
           heading="Ecommerce"
           subheading="Ui of ecommerce website"
@@ -141,7 +141,7 @@ const Link = ({ heading, imgSrc, subheading, href }: LinkProps) => {
           alt={`Image representing a link for ${heading}`}
           layout="fill"
           objectFit="cover"
-          className="rounded-lg"
+          className="rounded-lg border-2"
         />
       </motion.div>
 

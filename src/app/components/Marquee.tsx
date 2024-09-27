@@ -109,17 +109,11 @@ export default function VelocityScroll({
       <ParallaxText
         baseVelocity={default_velocity}
         className={
-          "text-[15rem] font-black text-[#262626] before:w-full before:h-full;"
+          "text-[9.25rem] leading-[82%] tracking-[-0.04em] font-semibold text-text before:w-full before:h-full"
         }
       >
         {text}
       </ParallaxText>
-      {/* <ParallaxText
-        baseVelocity={-default_velocity}
-        className={`${className} -rotate-3`}
-      >
-        {text}
-      </ParallaxText> */}
     </section>
   );
 }

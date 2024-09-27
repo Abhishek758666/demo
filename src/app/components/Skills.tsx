@@ -10,11 +10,11 @@ import { useAnimate } from "framer-motion";
 const Skills = () => {
   return (
     <>
-      <h1 className="mx-auto max-w-6xl text-[2rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] font-black pt-10 sm:pt-16 md:pt-20">
+      <h1 className="mx-auto max-w-7xl text-[2rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] font-semibold pt-10 sm:pt-16 md:pt-20 tracking-[-0.07em]">
         SKILLS
       </h1>
       <div className="px-2 sm:px-4 py-6 sm:py-8 md:py-12">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-7xl">
           <ClipPathLinks />
         </div>
       </div>
@@ -143,7 +143,7 @@ const LinkBox = ({ Icon, href }: LinkBoxProps) => {
         style={{
           clipPath: BOTTOM_RIGHT_CLIP,
         }}
-        className="absolute inset-0 grid place-content-center bg-white text-black"
+        className="absolute inset-0 grid place-content-center bg-text text-white"
       >
         <Icon className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl" />
       </div>

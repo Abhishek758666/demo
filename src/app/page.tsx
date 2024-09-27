@@ -1,17 +1,12 @@
 "use client";
-import { useScroll } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Lenis from "lenis";
 import Hero from "./components/Hero";
-import Other from "./components/OtherSection";
-import Loader from "./components/Loader";
-
+import HoverImageLinks from "./components/ImageHoverLinks";
+import Skills from "./components/Skills";
+import Footer from "./components/Footer";
 export default function Home() {
   const container = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start start", "end end"],
-  });
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -26,10 +21,10 @@ export default function Home() {
 
   return (
     <main ref={container} className="relative w-full h-[200vh] font-font">
-      <Loader />
-      <Hero scrollYProgress={scrollYProgress} />
-
-      <Other scrollYProgress={scrollYProgress} />
+      <Hero />
+      <HoverImageLinks />
+      <Skills />
+      <Footer />
     </main>
   );
 }

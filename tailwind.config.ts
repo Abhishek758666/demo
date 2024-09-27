@@ -19,10 +19,11 @@ const config = {
     },
     extend: {
       fontFamily: {
-        font: "Mona-Sans",
+        font: "Inter",
       },
       colors: {
         border: "hsl(var(--border))",
+        text: "#0C0407",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",

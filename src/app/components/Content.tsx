@@ -15,12 +15,7 @@ const Section2 = () => {
       <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-zinc-300 uppercase w-full text-left mb-2 sm:mb-4">
         send me message
       </h2>
-      <a
-        href="mailto:aabhik81@gmail.com"
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold font-sans text-white hover:underline cursor-pointer transition duration-300"
-      >
-        aabhik81@gmail.com
-      </a>
+
       <hr className="my-4 sm:my-6 border-gray-200 w-full max-w-6xl mx-auto" />
 
       <div className="w-full max-w-screen-xl mx-auto py-4 sm:py-6 md:py-8">
