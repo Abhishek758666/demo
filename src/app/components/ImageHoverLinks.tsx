@@ -2,9 +2,30 @@ import { useMotionValue, motion, useSpring, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import Image, { StaticImageData } from "next/image";
-import ecomm from "@/public/ecomm.png";
 import movie from "@/public/movieflix.png";
-import unavailable from "@/public/not-available.webp";
+import bookstore from "@/public/bookdtore.png";
+import bishram from "@/public/bishraam.png";
+
+const projectLinks = [
+  {
+    heading: "Bishraam",
+    subheading: "Hotel booking platform",
+    imgSrc: bishram,
+    href: "https://bishraam.com/",
+  },
+  {
+    heading: "Movie Flix",
+    subheading: "A movie finder webiste with trailer",
+    imgSrc: movie,
+    href: "https://movie-flix-beta.vercel.app/",
+  },
+  {
+    heading: "Book Store",
+    subheading: "MERN crud app",
+    imgSrc: bookstore,
+    href: "https://mern-bookstore-frontend-nbb8.onrender.com/",
+  },
+];
 
 export const HoverImageLinks = () => {
   return (
@@ -14,30 +35,17 @@ export const HoverImageLinks = () => {
       </h1>
 
       <div className="w-full max-w-7xl mx-auto">
-        <Link
-          heading="Ecommerce"
-          subheading="Ui of ecommerce website"
-          imgSrc={ecomm}
-          href="https://ecommerce-react-lime-chi.vercel.app/"
-        />
-        <Link
-          heading="SkillSync"
-          subheading="a blogging website"
-          imgSrc={unavailable}
-          href="/unavailable"
-        />
-        <Link
-          heading="MovieFlix"
-          subheading="movie and tvshows trailer website"
-          imgSrc={movie}
-          href="https://movie-flix-beta.vercel.app/"
-        />
-        <Link
-          heading="Video Player"
-          subheading="a video player website"
-          imgSrc={unavailable}
-          href="/unavailable"
-        />
+        {projectLinks.map((value, index) => {
+          return (
+            <Link
+              key={index}
+              heading={value.heading}
+              subheading={value.subheading}
+              imgSrc={value.imgSrc}
+              href={value.href}
+            />
+          );
+        })}
       </div>
     </section>
   );
@@ -88,7 +96,7 @@ const Link = ({ heading, imgSrc, subheading, href }: LinkProps) => {
       onMouseMove={handleMouseMove}
       initial="initial"
       whileHover="whileHover"
-      className="group tracking-wide relative flex items-center justify-between border-b-2 border-neutral-700 py-4 transition-colors duration-500 hover:border-neutral-50 hover:bg-primary md:py-4"
+      className="group tracking-wide relative flex items-center justify-between border-b-2 border-neutral-700 py-4 transition-colors duration-500 hover:border-neutral-50 hover:bg-[#E64A27] md:py-4"
     >
       <div className="flex-grow">
         <motion.span

@@ -1,11 +1,18 @@
+"use client";
 import { motion } from "framer-motion";
 import VelocityScroll from "./Marquee";
 import Image from "next/image";
 import Nav from "./Nav";
 import Magnetic from "./Magnetic";
-import profile from "../../public/profile.jpg";
+import profile from "../../public/profile.gif";
 
 const Hero = () => {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/CV_ABHISHEK_KHATI.pdf";
+    link.download = "CV_BHISHEK_KHATI.pdf";
+    link.click();
+  };
   return (
     <div>
       <Nav />
@@ -16,11 +23,10 @@ const Hero = () => {
         </div>
         <div className="right w-full">
           <p>
-            Hello! I&apos;m a versatile software developer who thrives on
-            transforming technical challenges into scalable web applications.
-            Specializing in React, Next.js, and SQL, I craft dynamic and
-            engaging user interfaces that not only enhance the overall user
-            experience but also drive interaction and retention.
+            Passionate Frontend Developer skilled in creating responsive,
+            user-centric web applications using modern technologies like
+            Next.js, React.js, and Tailwind CSS. Eager to contribute to dynamic
+            teams and solve challenging problems
           </p>
         </div>
       </motion.div>
@@ -32,13 +38,12 @@ const Hero = () => {
           <Image src={profile} alt="profile" className="w-full h-full" />
         </div>
         <Magnetic>
-          <a
-            href="/cv.pdf"
-            download="Abhishek_Khati_CV.pdf"
-            className="w-[9.125rem] h-[9.125rem] bg-blue-400 flex justify-center items-center rounded-full cursor-pointer text-white"
+          <div
+            onClick={handleDownload}
+            className="w-[9.125rem] h-[9.125rem] bg-[#E64A27] flex justify-center items-center rounded-full cursor-pointer text-white"
           >
             Download CV
-          </a>
+          </div>
         </Magnetic>
       </div>
       <motion.div className="w-full -mt-[16rem]">
